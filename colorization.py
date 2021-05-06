@@ -34,7 +34,6 @@ def save_img(arr, name, format):
             im.putpixel((i, j), arr[i][j])
     im.save(name)
 
-
 # returns a 2D L array with the grayscale version of the original array
 # dim refers to which column to start copying, set to 0 by default
 # this optional argument is used for generating testing data
@@ -229,13 +228,3 @@ def img_similarity(a, b):
         for j in range(len(a[0])):
             dist += dist_rgb(a[i][j], b[i][j])
     return dist
-
-fp = "landscape.png"
-arr = image_creation(fp)
-print(f"{len(arr)} x {len(arr[0])}")
-#save_img(grayscale(arr), f"gray_{fp}", "L")
-#save_img(recolor(arr, cluster(arr, 29)), "recol_dua.png", "RGB")
-#save_img(recolor(arr, cluster(arr, 5)), f"recol_{fp}", "RGB")
-basic_agent(fp)
-#center_img(cluster(arr, 5), f"reps{fp}")
-#driver()
