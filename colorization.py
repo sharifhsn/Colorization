@@ -23,6 +23,7 @@ def image_creation(fp):
     
     return arr
 
+
 # saves a 2D array as a picture file to the current directory
 def save_img(arr, name, format):
     length = len(arr)
